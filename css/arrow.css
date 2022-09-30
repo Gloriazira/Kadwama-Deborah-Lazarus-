@@ -1,0 +1,56 @@
+.next-prev{
+  width: 70%;
+  margin: 5% auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.next, .prev{
+  color: #414141;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.next:hover, .prev:hover{
+  text-decoration: none;
+  color: inherit;
+}
+.arrow-3,.arrow-2 {
+  width:40px;
+  height:25px;
+  display: flex;
+}
+.arrow-3:before,
+.arrow-3:after, .arrow-2:before, .arrow-2:after{
+  content: "";
+  flex: 1;
+  margin: 0 5px;
+  background: currentColor;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation: a3 .5s infinite alternate;
+}
+
+.arrow-3:after, .arrow-2::after {
+  --s:1;
+}
+.arrow-3:before, .arrow-2::before{
+  --s: -1;
+}
+.arrow-3:before, .arrow-2::after{
+  display: none;
+}
+
+
+@keyframes a3 {
+  0%  {transform: scaleX(var(--s,1)) translate(-4px)}
+  100%{transform: scaleX(var(--s,1)) translate( 4px)}
+}
+
+@media (max-width: 425px) {
+  .arrow-3, .arrow-2 {
+    width: 35px;
+  }
+  .prev p, .next p{
+    font-size: 13px
+  }
+}

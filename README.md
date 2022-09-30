@@ -1,2 +1,4 @@
-# Kadwama-Lazarus-Deborah
-A Portfolio Website for a UI/UX Designer
+# **Kadwama-Deborah-Lazarus**
+## A Portfolio Website for a UI/UX Designer
+Website link: [KDL](https://kadwama.com/)
+
